@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "445258179863",
+    "firebase_url": "https://portraitfoldercleaner.firebaseio.com",
+    "project_id": "portraitfoldercleaner",
+    "storage_bucket": "portraitfoldercleaner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445258179863:android:38e84e215a0a7960",
+        "android_client_info": {
+          "package_name": "com.ojha.sanjeeb.portraitfoldercleaner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445258179863-ot3sjj26phj4peam9bum1s1fcn0hu7t3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ojha.sanjeeb.portraitfoldercleaner",
+            "certificate_hash": "4a9a0489bac75f3ed913d75aae929bebfd6d3728"
+          }
+        },
+        {
+          "client_id": "445258179863-jl47n8l15iv7982kt00ujh8grrehrv9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKmqFNAuF08PdIKga9qL6fHc_8gGwDADs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445258179863-jl47n8l15iv7982kt00ujh8grrehrv9p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
