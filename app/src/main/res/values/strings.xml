@@ -85,6 +85,6 @@
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
     <string name="default_folder">/storage/emulated/0/DCIM/</string>
-    <string name="default_web_client_id">445258179863-jl47n8l15iv7982kt00ujh8grrehrv9p.apps.googleusercontent.com</string>
+    <string name="defaultx_web_client_id">445258179863-jl47n8l15iv7982kt00ujh8grrehrv9p.apps.googleusercontent.com</string>
 
 </resources>

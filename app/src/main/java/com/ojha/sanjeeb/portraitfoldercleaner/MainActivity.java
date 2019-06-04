@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.provider.DocumentFile;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -14,7 +13,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
     private static final int READ_REQUEST_CODE = 1000;
     private static final String TAG = "GoogleActivity";
     public EditText editText;
@@ -32,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == READ_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
+                showProgressDialog();
 
                 Uri uri = data.getData();
                 log("Selected Document is : " + uri.toString());
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
                 }
+                hideProgressDialog();
             }
 
         }
@@ -86,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // revokeAccess();
         } else if (i == R.id.btn_SelectFolder) {
             PerformFileSearch();
+        } else if (i == R.id.scanFolder) {
+            scanFolders();
         }
     }
 
@@ -122,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void scanFolders() {
         try {
+            showProgressDialog();
             editText.setText("");
             editText.append("Scanning folders:");
             String folderLocation = folderText.getText().toString();
@@ -129,6 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d(TAG, "Checking file " + folderLocation);
             File[] files = root.listFiles();
             for (int i = 0; i < files.length; i++) {
+
                 if (files[i].isDirectory()) {
                     editText.append("\n" + files[i].getName());
                     File[] anotherFile = files[i].listFiles();
@@ -142,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
             }
+            hideProgressDialog();
         } catch (Exception ex0) {
             Log.e(TAG, ex0.getMessage() + ex0.getStackTrace());
         }
